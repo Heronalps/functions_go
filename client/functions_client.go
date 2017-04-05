@@ -13,6 +13,9 @@ import (
 	"github.com/iron-io/functions_go/client/routes"
 	"github.com/iron-io/functions_go/client/tasks"
 	"github.com/iron-io/functions_go/client/version"
+
+	"github.com/iron-io/functions_go/client/build"
+
 )
 
 // Default functions HTTP client.
@@ -40,6 +43,8 @@ func New(transport runtime.ClientTransport, formats strfmt.Registry) *Functions 
 
 	cli.Version = version.New(transport, formats)
 
+	cli.Build = build.New(transport, formats)
+
 	return cli
 }
 
@@ -54,6 +59,8 @@ type Functions struct {
 	Version *version.Client
 
 	Transport runtime.ClientTransport
+
+	Build *build.Client
 }
 
 // SetTransport changes the transport on the client and all its subresources
@@ -67,5 +74,7 @@ func (c *Functions) SetTransport(transport runtime.ClientTransport) {
 	c.Tasks.SetTransport(transport)
 
 	c.Version.SetTransport(transport)
+
+	c.Build.SetTransport(transport)
 
 }
