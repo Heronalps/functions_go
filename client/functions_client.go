@@ -12,7 +12,7 @@ import (
 	"github.com/cmdhema/functions_go/client/apps"
 	"github.com/cmdhema/functions_go/client/routes"
 	"github.com/cmdhema/functions_go/client/tasks"
-	"github.com/cmdema/functions_go/client/version"
+	"github.com/cmdhema/functions_go/client/version"
 
 	"github.com/cmdhema/functions_go/client/build"
 
