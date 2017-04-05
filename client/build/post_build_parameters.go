@@ -8,7 +8,7 @@ import (
 	"github.com/go-openapi/errors"
 	"github.com/go-openapi/runtime"
 	//cr "github.com/go-openapi/runtime/client"
-	"github.com/iron-io/functions_go/models"
+	"github.com/cmdhema/functions_go/models"
 	strfmt "github.com/go-openapi/strfmt"
 )
 

@@ -8,7 +8,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	"github.com/iron-io/functions_go/models"
+	"github.com/cmdhema/functions_go/models"
 )
 
 // PostBuildReader is a Reader for the PostBuild structure.
