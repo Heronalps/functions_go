@@ -15,6 +15,7 @@ import (
 	"github.com/cmdhema/functions_go/client/version"
 
 	"github.com/cmdhema/functions_go/client/build"
+	"github.com/cmdhema/functions_go/client/inject"
 
 )
 
@@ -45,6 +46,8 @@ func New(transport runtime.ClientTransport, formats strfmt.Registry) *Functions 
 
 	cli.Build = build.New(transport, formats)
 
+	cli.Inject = inject.New(transport, formats)
+
 	return cli
 }
 
@@ -61,6 +64,8 @@ type Functions struct {
 	Transport runtime.ClientTransport
 
 	Build *build.Client
+
+	Inject *inject.Client
 }
 
 // SetTransport changes the transport on the client and all its subresources
@@ -77,4 +82,5 @@ func (c *Functions) SetTransport(transport runtime.ClientTransport) {
 
 	c.Build.SetTransport(transport)
 
+	c.Inject.SetTransport(transport)
 }
