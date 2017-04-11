@@ -44,6 +44,11 @@ type Route struct {
 
 	// Route type
 	Type interface{} `json:"type,omitempty"`
+
+	Deeplearning string `json:"deeplearning,omitempty"`
+
+	FileName       string      `json:"filename"`
+
 }
 
 // Validate validates this route
